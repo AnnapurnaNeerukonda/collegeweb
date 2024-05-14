@@ -3,7 +3,7 @@ import { AiFillPlayCircle } from 'react-icons/ai';
 
 const Footer = () => {
   return (
-    <footer className='mt-5'>
+    <footer className='mt-5 bg-light'>
       <div className="container">
         <div className="row">
           <div className="col-md-3">
@@ -16,11 +16,11 @@ const Footer = () => {
           </div>
           <div className="col-md-3">
             <h5>Video Tour</h5>
-            <p><AiFillPlayCircle /> <a href="https://www.youtube.com/watch?v=vm5mThhCAwQ">Watch now</a></p>
+            <p><AiFillPlayCircle /> <a href="https://www.youtube.com/watch?v=vm5mThhCAwQ" target='blank'>Watch now</a></p>
           </div>
           <div className="col-md-3">
             <h5>Community Radio</h5>
-            <p><FaWifi /> Tune in to our community radio 90.4 for the latest updates and news.</p>
+            <p><FaWifi /> Tune in to our community radio 90.4 fm for the latest updates and news.</p>
           </div>
         </div>
       </div>

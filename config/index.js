@@ -54,5 +54,5 @@ export const mainMenu = [
   },
 ];
 export const site = {
-  titleImage: 'https://tse3.mm.bing.net/th?id=OIP.faXd5pmgySlcxdum7LrwjQHaIz&pid=Api&P=0&h=180',
+  titleImage: 'public\images\logo.png',
 };

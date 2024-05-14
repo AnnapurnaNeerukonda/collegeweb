@@ -46,7 +46,7 @@ const Header = () => {
       <Container fluid>
         <Navbar.Brand>
           <img
-            src={site.titleImage}
+            src="/images/svecw-logo.png"
             height="40"
             className="d-inline-block align-top"
             alt="Navbar"
