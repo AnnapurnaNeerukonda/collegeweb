@@ -52,6 +52,7 @@ const Home = () => {
     <div>
       <div className={styles.imagecontainer}>
         <div ref={countRef} className='text-center mt-5 mb-5'>
+          <h3 className='text-center'>Vishnu Institute of Science and Technology- One of India's <p className='mt-3 mb-3'>-Best Ranked Universities</p> </h3>
           <img src="https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2022/02/tree.jpg" alt="Image description" className={styles.image} />
           <div className={styles.text}>Top Quality And Learning Experience</div>
         </div>

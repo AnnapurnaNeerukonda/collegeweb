@@ -1,8 +1,8 @@
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaYoutube } from 'react-icons/fa';
-import { FaPhone, FaEnvelope,FaWifi } from 'react-icons/fa'; 
+import { FaPhone, FaEnvelope,FaWifi,FaArrowRight } from 'react-icons/fa'; 
 import { AiFillPlayCircle } from 'react-icons/ai'; 
 import styles from '../styles/contact.module.css'
-
+import Link from 'next/link';
 const Contact = () => {
   return (
     <div>
@@ -38,8 +38,39 @@ const Contact = () => {
            <a href="https://www.linkedin.com/company/yourpage" className="mx-2"><FaLinkedin /></a>
            <a href="https://www.youtube.com/channel/yourpage"className="mx-2"><FaYoutube /></a>
           </div>
+          <div className='bg-primary text-light'>
+              <h1 className="text-center p-5">Where could journey at Vishnu<p>take you ?</p></h1>
+               <div className='container text-center'>
+                    <div className='row justify-content-center'>
+                    <div className='col-2 p-3 '>
+                        <Link href="/department">
+                         <a className="text-decoration-none text-light d-flex align-items-center ">
+                          <FaArrowRight /> Departments
+                                </a>
+                           </Link>
+                       </div>
+                      <div className='col-2 p-3'>
+                      <Link href="/aboutUS">
+                         <a className="text-decoration-none text-light d-flex align-items-center">
+                         <FaArrowRight />About Us
+                                </a>
+                           </Link>
+                       </div>
+                     <div className='col-2 p-3'>
+                     <Link href="/">
+                         <a className="text-decoration-none text-light d-flex align-items-center">
+                         <FaArrowRight />Placements
+                                </a>
+                           </Link>
+                      </div>
+                   </div>
+                </div>
+                </div>
+           <h3 className="text-center p-5 text-primary">Enjoy your Student Life & Excel at VISHNU</h3>
+
+  </div>
+
       </div>
-    </div>
     </div>
   );
 }
