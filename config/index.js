@@ -12,39 +12,39 @@ export const mainMenu = [
     id: '1',
     subMenu: [
       {
-        title: 'VISHNU',
-        path: '/contact', // Example path, replace with the actual path
+        title: 'DISCIPLINES',
+        path: '/department', 
       },
       {
         divider: true,
       },
       {
         title: 'Information Technology',
-        path: '/contact', // Example path, replace with the actual path
+        path: '/contact', 
       },
       {
         title: 'Computer Science and Technology',
-        path: '/contact', // Example path, replace with the actual path
+        path: '/contact', 
       },
       {
         title: 'Electronics and Communication Engineering',
-        path: '/contact', // Example path, replace with the actual path
+        path: '/contact', 
       },
       {
         title: 'Artificial Engineering (AI)',
-        path: '/contact', // Example path, replace with the actual path
+        path: '/contact', 
       },
       {
         title: 'Electrical & Electronics Engineering',
-        path: '/contact', // Example path, replace with the actual path
+        path: '/contact', 
       },
       {
         title: 'Mechanical Engineering',
-        path: '/contact', // Example path, replace with the actual path
+        path: '/contact', 
       },
       {
         title: 'Civil Engineering (CE)',
-        path: '/contact', // Example path, replace with the actual path
+        path: '/contact', 
       },
     ],
   },

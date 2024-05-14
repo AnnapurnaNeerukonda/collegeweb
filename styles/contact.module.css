@@ -1,16 +1,33 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.address-map-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%; /* Adjust the width as needed */
+  max-width: 800px; /* Maximum width for responsiveness */
+}
+
+.address-map-container .col-md-4 {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .address-map-container {
+    width: 90%; /* Adjust for smaller screens */
+  }
+}
 .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white; /* Text color */
-    font-size: 24px; /* Adjust font size as needed */
-  }
-  .container {
-    position: relative;
-    text-align: center;
-    color: white; /* Text color */
-  }
-  .d{
-    background-color: green;
-  }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Text color */
+  font-size: 24px; /* Adjust font size as needed */
+}
