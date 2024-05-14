@@ -87,7 +87,7 @@ const MissionVision = () => {
         </div>
         </div>
         <div className='mt-5'>
-            <img src="https://sastra.edu/images/sastra/MissionVission/mission2025.jpg"/>
+            <img src="https://sastra.edu/images/sastra/MissionVission/mission2025.jpg" className='vision-img' alt='vision-img'/>
         </div>
       <style jsx>{`
         .list-group {
@@ -132,6 +132,12 @@ const MissionVision = () => {
           width: 24px;
           height: 24px;
         }
+        @media (max-width:576px){
+          .vision-img{
+            width:100%
+          }
+        }
+        
       `}</style>
     </div>
   );

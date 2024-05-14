@@ -2,44 +2,80 @@
 .containerFluid {
   position: relative;
 }
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Transition for smoother effect */
+}
 
+.card:hover .overlay-text {
+  opacity: 1; /* Show text on hover */
+}
 .container {
-  border: 1px solid red;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(/images/svecw.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7)), url(https://content.jdmagicbox.com/comp/bhimavaram/90/9999pmulhydstd86690/catalogue/shri-vishnu-engineering-college-for-women-bhimavaram-ho-bhimavaram-colleges-1x5gf1z.jpg);
   background-size: cover;
   background-position: center; 
   height: auto;
   min-height: 450px; 
 }
 
-.a {
-  position: relative;
-  width: 100%;
-  background-image: url('/images/svecw.jpeg');
-  background-size: cover;
-  height: auto; 
-}
-
-.overlayRow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
-
 .card {
-  width: 250px; 
-  height: 250px; 
+  transition: transform 0.3s ease;
+  width: 285px; 
+  height: 150px; 
   background-color: rgba(255, 255, 255, 0.7); 
   border: 1px solid #000; 
+  position: relative;
+}
+.card:hover {
+  transform: scale(1.05);
 }
 .card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(173, 216, 230, 0); /* Light blue color with transparency */
+  transition: background-color 0.3s ease; /* Transition for smoother effect */
+}
+
+.card:hover::after {
+  background-color: rgba(27, 119, 150, 0.5); /* Light blue color with opacity */
+}
+.card-img-top {
+  transition: filter 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+
+.card:hover .card-img-top {
+  filter: grayscale(100%); /* Apply grayscale filter on hover */
+}
+.cardtext {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.card:hover .cardtext {
+  display: block;
+  background-color:black;
+}
+
 
 @media (max-width: 767px) {
   .container,
