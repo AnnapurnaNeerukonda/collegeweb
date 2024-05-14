@@ -6,9 +6,8 @@ import Link from 'next/link';
 const Contact = () => {
   return (
     <div>
-      <div style={{ width: '100%', height: '50%' ,marginBottom:"30px"}}>
-       <h1 className={styles.text} >Contact Us</h1> 
-        <img src="https://www.yuvamind.com/colleges/images/college/shri-vishnu-engineering-college-bhimavaram-campus.png" className="img-fluid" style={{ width: '100%', height: '25%' ,backgroundColor:"#ADD8E6" }} alt="Contact" />
+      <div className="text-center"style={{ width: '100%', height: '50%' ,marginBottom:"30px"}}>
+        <img src="https://www.static-contents.youth4work.com/university/Documents/Colleges/CollegeBanner/fabd6afe-a77c-4c3e-8e87-087f37c46531.png" className="img-fluid" width={1350} height={700} alt="Contact" />
       </div>
       <div className="container-fluid" style={{backgroundColor:"#F0F8FF"}}>
       <div className="row justify-content-center align-items-center">
@@ -30,6 +29,25 @@ const Contact = () => {
           <div className="col-md-4"> 
            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30593.33291547152!2d81.48604911083983!3d16.568119000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37cd4eb220051d%3A0xea3d7b50d0a1458!2sShri%20Vishnu%20Engineering%20College%20Autonomous!5e0!3m2!1sen!2sin!4v1715508671415!5m2!1sen!2sin" width="100%" height="350" style={{ border: '0' }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
           </div>
+          <div className="row justify-content-center text-center mt-5">
+              <h3 className='mb-3'>Departments Contact Information</h3>
+                      <div className="col-md-7 bg-white ">
+                        <h6 className=' mb-3'>Department of AI
+                       <FaPhone style={{marginLeft: '20px' }}/>+1 (123) 564-7890,<FaEnvelope style={{marginLeft: '20px' }}/>infodeskAI@gmail.com</h6>
+                       <h6 className='mb-3'>Computer Science & Engineering
+                       <FaPhone style={{marginLeft: '20px' }}/>+1 (123) 4
+                       356-7890,<FaEnvelope style={{marginLeft: '20px' }}/>infodeskcse@gmail.com</h6>
+                       <h6 className='mb-3'>Electronics Communication Engineering
+                       <FaPhone style={{marginLeft: '20px' }}/>+1 (123) 436-7890,<FaEnvelope style={{marginLeft: '20px' }}/>infodeskECE@gmail.com</h6>
+                       <h6 className='mb-3'>Electrical & Electronics Engineering
+                       <FaPhone style={{marginLeft: '20px' }}/>+1 (123) 496-7890,
+                       <FaEnvelope style={{marginLeft: '20px' }}/>infodeskEEE@gmail.com</h6>
+                       <h6 className='mb-3'>Mechanical Engineering-
+                       <FaPhone style={{marginLeft: '20px' }}/>+1 (123) 499-7890,<FaEnvelope style={{marginLeft: '20px' }}/>infodeskME@gmail.com</h6>
+                       <h6 className='mb-3'>Civil Engineering
+                       <FaPhone />+1 (123) 499-7890,<FaEnvelope style={{marginLeft: '20px' }}/>infodeskCE@gmail.com</h6>
+                       </div>
+                   </div>
            <h3 className="text-center m-5"><b>VISHNU ON SOCIAL MEDIA</b></h3>
           <div className="d-flex justify-content-center align-items-center mb-5">
            <a href="https://www.facebook.com/yourpage" className="mx-2"><FaFacebook /></a>

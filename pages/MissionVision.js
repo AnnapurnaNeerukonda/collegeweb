@@ -79,7 +79,6 @@ const MissionVision = () => {
             </div>
             {isVisionExpanded && (
               <div className="content">
-                {/* Vision content */}
                 <p>To be a premier academic institution, recognized internationally for its contribution to industry and society through excellence in teaching, learning, research, internationalization, entrepreneurship and leadership.Transforming life through excellence in education and research.</p>
               </div>
             )}

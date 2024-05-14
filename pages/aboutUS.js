@@ -1,6 +1,5 @@
 import MissionVision from './MissionVision';
 import styles from '../styles/about.module.css';
-import { BiHome } from 'react-icons/bi';
 const TimelineItem = ({ year, heading, star }) => (
   <div className={styles.timelineItem}>
 
@@ -42,13 +41,8 @@ const About = ({ }) => {
             star="☆"
           />
           <TimelineItem
-            year="2009"
-            heading="Educating children became our major moto , established vishnu school"
-            star="☆"
-          />
-          <TimelineItem
-            year="2009"
-            heading="Educating children became our major moto , established vishnu school"
+            year="2012"
+            heading="Taking education Forward a new campus for womens in hyderabad got estalished BVRITH for women"
             star="☆"
           />
         </div>

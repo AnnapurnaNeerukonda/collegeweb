@@ -1,15 +1,6 @@
 import React, { useState } from 'react';
 import styles from '../styles/department.module.css';
 const Department = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
-
-  const handleImageClick = (image) => {
-    setSelectedImage(image);
-  };
-
-  const resetSelectedImage = () => {
-    setSelectedImage(null);
-  };
   return (
     <div className={`${styles.container} container-fluid`}>
       <h2 className="text-center mt-3 mb-5">Departments</h2>

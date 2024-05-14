@@ -1,26 +1,42 @@
 import React from 'react';
-import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
-
-SwiperCore.use([Navigation, Pagination, Autoplay]);
+import { Carousel } from 'react-bootstrap';
 
 const Slider = () => {
   return (
-    <Swiper
-      navigation
-      pagination={{ clickable: true }}
-      autoplay={{ delay: 3000 }}
-      loop={true}
-    >
-      <SwiperSlide>
-        <img src="https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2022/02/tree.jpg" alt="Image 1" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2022/02/tree.jpg" alt="Image 2" />
-      </SwiperSlide>
-      {/* Add more SwiperSlides with images as needed */}
-    </Swiper>
+    <Carousel interval={2000} style={{ height: "500px" }}>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="/images/carousel.jpeg"
+          alt="First slide"
+          style={{ maxHeight: "500px", objectFit: "cover" }}
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="/images/carousel1.jpeg"
+          alt="Second slide"
+          style={{ maxHeight: "500px", objectFit: "cover" }}
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="/images/carousel3.webp"
+          alt="Third slide"
+          style={{ maxHeight: "500px", objectFit: "cover" }}
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="/images/carousel4.webp"
+          alt="Fourth slide"
+          style={{ maxHeight: "500px", objectFit: "cover" }}
+        />
+      </Carousel.Item>
+    </Carousel>
   );
 };
 

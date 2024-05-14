@@ -1,5 +1,9 @@
 export const mainMenu = [
   {
+    title: 'Home',
+    path: '/',
+  },
+  {
     title: 'About Us',
     path: '/aboutUS',
   },
@@ -20,31 +24,31 @@ export const mainMenu = [
       },
       {
         title: 'Information Technology',
-        path: '/contact', 
+        path: '/department', 
       },
       {
         title: 'Computer Science and Technology',
-        path: '/contact', 
+        path: '/department', 
       },
       {
         title: 'Electronics and Communication Engineering',
-        path: '/contact', 
+        path: '/department', 
       },
       {
         title: 'Artificial Engineering (AI)',
-        path: '/contact', 
+        path: '/department', 
       },
       {
         title: 'Electrical & Electronics Engineering',
-        path: '/contact', 
+        path: '/department', 
       },
       {
         title: 'Mechanical Engineering',
-        path: '/contact', 
+        path: '/department', 
       },
       {
         title: 'Civil Engineering (CE)',
-        path: '/contact', 
+        path: '/department', 
       },
     ],
   },

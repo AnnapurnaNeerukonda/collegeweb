@@ -1,10 +1,6 @@
 
-/* .timelineItem *{
-  border: 1px solid red;
-}  */
 .about {
   padding: 4rem 2rem;
-  /* background-image: url("/images/vishnumaingate.jpg"); */
   background-size: cover;
   min-height: 100vh;
 }

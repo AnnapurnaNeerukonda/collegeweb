@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from '../styles/Home.module.css';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import Slider from '../pages/slider';
 import Link from 'next/link';
 const Home = () => {
   const [establishedYear, setEstablishedYear] = useState(0);
@@ -50,10 +51,11 @@ const Home = () => {
 
   return (
     <div>
+      <Slider/>
       <div className={styles.imagecontainer}>
         <div ref={countRef} className='text-center mt-5 mb-5'>
-          <h3 className='text-center'>Vishnu Institute of Science and Technology- One of India's <p className='mt-3 mb-3'>-Best Ranked Universities</p> </h3>
-          <img src="https://d23qowwaqkh3fj.cloudfront.net/wp-content/uploads/2022/02/tree.jpg" alt="Image description" className={styles.image} />
+          <h3 className='text-center'>Vishnu Educational Society- One of India's <p className='mt-3 mb-5'>-Best Ranked Universities</p> </h3>
+          <img src="https://svecw.edu.in/wp-content/uploads/2024/03/home-slider-2.webp" alt="Image description" className={styles.image} />
           <div className={styles.text}>Top Quality And Learning Experience</div>
         </div>
       </div>

@@ -2,21 +2,21 @@
 .image {
   transition: transform 0.3s ease;
   margin-bottom: 20px;
-  width: auto;
-  height: auto; /* Smooth transition for the scaling effect */
+  width: 550px;
+  height: 250px !important;
 }
 .imagecontainer {
   text-align: center;
 }
 
 .imagecontainer .image {
-  max-width: 100%; /* Ensure image doesn't exceed container width */
-  height: auto; /* Maintain aspect ratio */
-  transition: transform 0.3s ease; /* Add a smooth transition for the enlargement effect */
+  max-width: 100%; 
+  height: auto; 
+  transition: transform 0.3s ease; 
 }
 
 .imagecontainer:hover .image {
-  transform: scale(1.1); /* Slightly enlarge image on hover */
+  transform: scale(1.1); 
 }
 .image-container .text {
   position: absolute;
@@ -29,6 +29,6 @@
 }
 @media (max-width: 768px) {
   .imagecontainer:hover .image {
-    transform: scale(1.05); /* Slightly enlarge image on hover for smaller screens */
+    transform: scale(1.05);
   }
 }
