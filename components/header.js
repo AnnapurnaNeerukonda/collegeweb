@@ -1,3 +1,44 @@
+// import { useState } from 'react';
+// import Link from 'next/link';
+// import styles from '../styles/Navbar.module.css';
+// import { mainMenu } from '../config/index'; 
+
+// const Header = ({ titleImage }) => {
+//   const [isOpen, setIsOpen] = useState(false);
+
+//   const toggleMenu = () => {
+//     setIsOpen(!isOpen);
+//   };
+
+//   return (
+//     <nav className={styles.navbar}>
+//       <div className={styles.logo}>
+//         <img src={titleImage} alt="Logo" />
+//       </div>
+//       <div className={`${styles.menuIcon} ${isOpen && styles.open}`} onClick={toggleMenu}>
+//         <div className={styles.bar}></div>
+//         <div className={styles.bar}></div>
+//         <div className={styles.bar}></div>
+//       </div>
+//       <ul className={`${styles.menu} ${isOpen && styles.open}`}>
+//         {mainMenu.map((item, index) => (
+//           <li key={index}>
+//             {item.divider ? (
+//               <hr className={styles.divider} />
+//             ) : (
+//               <Link href={item.path}>
+//                 <a onClick={toggleMenu}>{item.title}</a>
+//               </Link>
+//             )}
+//           </li>
+//         ))}
+//       </ul>
+//       {isOpen && <div className={styles.overlay} onClick={toggleMenu}></div>}
+//     </nav>
+//   );
+// };
+
+// export default Header;
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import Link from 'next/link';
 import { useRouter } from 'next/router';

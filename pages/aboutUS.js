@@ -1,7 +1,11 @@
-const About = () => {
-    return (
-      <div>About</div>
-    )
-  }
-  
-  export default About
+import MissionVision from './MissionVision';
+
+const About = ({}) => {
+  return (
+    <div>
+      <MissionVision />
+    </div>
+  );
+};
+
+export default About;
