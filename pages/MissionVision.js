@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
 
 const MissionVision = () => {
@@ -6,13 +6,24 @@ const MissionVision = () => {
   const [isMissionExpanded, setIsMissionExpanded] = useState(false);
   const [isVisionExpanded, setIsVisionExpanded] = useState(false);
 
+  const missionVisionRef = useRef(null);
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      setShowCoreValues(true);
-    }, 1000); 
-    return () => clearTimeout(timeout);
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        setTimeout(() => {
+          setShowCoreValues(true);
+        }, 1000); // Delay the display of core values by 1 second
+        observer.disconnect(); // Disconnect the observer once executed
+      }
+    });
+    observer.observe(missionVisionRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
+ 
   const toggleMission = () => {
     setIsMissionExpanded(!isMissionExpanded);
     setIsVisionExpanded(false);
@@ -32,7 +43,7 @@ const MissionVision = () => {
   ];
 
   return (
-    <div className="container my-4 text-center"> 
+    <div ref={missionVisionRef} className="container my-4 text-center"> 
       <div className="row" style={{backgroundColor:'#F0FFFF'}}>
         <div className="col-md-6 text-primary">
           <h3>CORE VALUES</h3>
@@ -41,7 +52,7 @@ const MissionVision = () => {
               <li
                 key={index}
                 className={`list-group-item animate${showCoreValues ? ' show' : ''}`}
-                style={{ animationDelay: `${index * 0.5}s`,backgroundColor:'#F0FFFF' }}
+                style={{ animationDelay: `${index * 0.5}s`,backgroundColor:'#F0FFFF', animationFillMode: 'forwards' }}
               >
                 {value}
               </li>

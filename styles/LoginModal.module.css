@@ -1,0 +1,28 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 999; /* Ensure it's above other content */
+  transition: opacity 0.3s ease; /* Apply transition for opacity */
+  opacity: 0; /* Initially hide the overlay */
+}
+
+.showOverlay {
+  opacity: 1; /* Show the overlay when modal is open */
+}
+
+.slideIn {
+  transition: transform 0.3s ease-out; /* Apply transition for the transform property */
+  transform: translateX(-100%); /* Initially hide the modal off-screen to the left */
+}
+/* LoginModal.module.css */
+.valid {
+  color: green; /* Define the style for the valid tick mark */
+}
+
+.showModal {
+  transform: translateX(0); /* Slide the modal in from the left when it's shown */
+}

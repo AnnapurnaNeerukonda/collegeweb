@@ -27,6 +27,17 @@
   background-color: rgba(78, 10, 226, 0.7);
   padding: 10px;
 }
+.text {
+  color: white; /* Set text color to white */
+  padding: 5px 10px; /* Add padding for better visibility */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  background-color: blue;
+  text-align: center; /* Center text horizontally */
+  position: absolute;
+  left: 50%; /* Move the text to the middle horizontally */
+  transform: translateX(-50%); /* Center the text perfectly */
+}
+
 @media (max-width: 768px) {
   .imagecontainer:hover .image {
     transform: scale(1.05);

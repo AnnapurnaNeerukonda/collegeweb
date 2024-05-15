@@ -1,10 +1,16 @@
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown, Modal, Form, Button } from 'react-bootstrap';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { mainMenu as menuLinks, site } from '../config';
-
+import { mainMenu as menuLinks } from '../config';
+import { useState } from 'react';
+import LoginModal from '../pages/Login';
 const MenuItem = ({ title, path, subMenu, id }) => {
   const router = useRouter();
+  const [showLoginModal, setShowLoginModal] = useState(false); // Move state up to Header component
+
+  const handleLoginClick = () => {
+    setShowLoginModal(true);
+  };
 
   if (subMenu) {
     const activeChild = subMenu.find((item) => router.pathname === item.path);
@@ -14,6 +20,17 @@ const MenuItem = ({ title, path, subMenu, id }) => {
           <DropdownItem {...item} key={index} />
         ))}
       </NavDropdown>
+    );
+  }
+
+  if (title === 'Login') {
+    return (
+      <>
+        <Nav.Item>
+          <Nav.Link onClick={handleLoginClick}>{title}</Nav.Link>
+        </Nav.Item>
+        <LoginModal show={showLoginModal} onHide={() => setShowLoginModal(false)} />
+      </>
     );
   }
 
@@ -42,7 +59,7 @@ const DropdownItem = ({ title, path, divider }) => {
 
 const Header = () => {
   return (
-    <Navbar style={{backgroundColor:"#ADD8E6"}} expand="lg" >
+    <Navbar style={{ backgroundColor: "#ADD8E6" }} expand="lg">
       <Container fluid>
         <Navbar.Brand>
           <img
@@ -54,7 +71,7 @@ const Header = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
-          <Nav className="justify-content-between " style={{fontWeight:"bold"}}>
+          <Nav className="justify-content-between " style={{ fontWeight: "bold" }}>
             {menuLinks.map((item, index) => (
               <MenuItem {...item} key={index} />
             ))}

@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from '../styles/Home.module.css';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import {FaArrowRight } from 'react-icons/fa';
 import Slider from '../pages/slider';
 import Link from 'next/link';
+
 const Home = () => {
   const [establishedYear, setEstablishedYear] = useState(0);
   const [numberOfStudents, setNumberOfStudents] = useState(0);
@@ -52,33 +53,33 @@ const Home = () => {
   return (
     <div>
       <Slider/>
-      <div className={styles.imagecontainer}>
-        <div ref={countRef} className={`${styles.smallscreen} text-center`} >
-        <h3 className='text-center'>Vishnu Educational Society- One of India&apos;s <p className='mt-3 mb-5'>-Best Ranked Universities</p> </h3>
+      <div className={`${styles.imagecontainer} mb-5`}>
+        <div className={`${styles.smallscreen} text-center mb-5`} >
+          <h3 className='text-center'>Vishnu Educational Society- One of India&apos;s <p className='mt-3 mb-5'>-Best Ranked Universities</p> </h3>
           <img src="https://svecw.edu.in/wp-content/uploads/2024/03/home-slider-2.webp" alt="Image description" className={styles.image} />
-          <div className={styles.text}>Top Quality And Learning Experience</div>
+          <div className={`${styles.text} mb-5 `}>Top Quality And Learning Experience</div>
         </div>
       </div>
-      <div className='container text-center'>
-        <div className='row mb-4' style={{ color: "#0000ff" }}>
+      <div className='container text-center' style={{marginTop:"90px"}}>
+        <div ref={countRef} className='row mb-4' style={{ color: "#0000ff" }}>
           <div className='col-md-4'>
-            <h1 >{establishedYear}</h1>
+            <h1>{establishedYear}</h1>
             <h5 style={{ color: "#0000ff" }}>Established </h5>
           </div>
           <div className='col-md-4'>
-            <h1 >{numberOfStudents}+</h1>
+            <h1>{numberOfStudents}+</h1>
             <h5 style={{ color: "#0000ff" }}>Number of Students</h5>
           </div>
           <div className='col-md-4'>
-            <h1 >{campusAcreage}+ acres</h1>
+            <h1>{campusAcreage}+ acres</h1>
             <h5 style={{ color: "#0000ff" }}>Acres Green Campus</h5>
           </div>
         </div>
         <Link href="/aboutUS">
-      <a className="btn btn-primary">
-        Explore More <FaArrowRight className="ml-1" />
-      </a>
-    </Link>
+          <a className="btn btn-primary">
+            Explore More <FaArrowRight className="ml-1" />
+          </a>
+        </Link>
       </div>
     </div>
   );

@@ -51,6 +51,11 @@ export const mainMenu = [
         path: '/department', 
       },
     ],
+   
+  },
+  {
+    title: 'Login',
+    path: '/',
   },
 ];
 export const site = {
