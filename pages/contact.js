@@ -60,21 +60,21 @@ const Contact = () => {
               <h1 className="text-center p-5">Where could journey at Vishnu<p>take you ?</p></h1>
                <div className='container text-center'>
                     <div className='row justify-content-center'>
-                    <div className='col-2 p-3 '>
+                    <div className=' col-12 col-md-2 p-3 '>
                         <Link href="/department">
                          <a className="text-decoration-none text-light d-flex align-items-center ">
                           <FaArrowRight /> Departments
                                 </a>
                            </Link>
                        </div>
-                      <div className='col-2 p-3'>
+                      <div className='col-12 col-md-2 p-3'>
                       <Link href="/aboutUS">
                          <a className="text-decoration-none text-light d-flex align-items-center">
                          <FaArrowRight />About Us
                                 </a>
                            </Link>
                        </div>
-                     <div className='col-2 p-3'>
+                     <div className='col-12 col-md-2 p-3'>
                      <Link href="/">
                          <a className="text-decoration-none text-light d-flex align-items-center">
                          <FaArrowRight />Placements

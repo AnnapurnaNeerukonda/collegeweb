@@ -42,7 +42,7 @@ const DropdownItem = ({ title, path, divider }) => {
 
 const Header = () => {
   return (
-    <Navbar style={{backgroundColor:"#ADD8E6"}} expand="lg">
+    <Navbar style={{backgroundColor:"#ADD8E6"}} expand="lg" >
       <Container fluid>
         <Navbar.Brand>
           <img
@@ -53,8 +53,8 @@ const Header = () => {
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center text-light">
-          <Nav className="justify-content-between ">
+        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
+          <Nav className="justify-content-between " style={{fontWeight:"bold"}}>
             {menuLinks.map((item, index) => (
               <MenuItem {...item} key={index} />
             ))}

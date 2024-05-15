@@ -32,3 +32,20 @@
     transform: scale(1.05);
   }
 }
+@media only screen and (max-width: 392px) {
+  .image-container {
+    margin-bottom: -400px !important; 
+  }
+}
+
+@media (max-width: 576px) {
+  .smallscreen{
+    margin-top: -20% !important;
+  }
+}
+
+@media (max-width: 416px) {
+  .smallscreen{
+    margin-top: -37% !important;
+  }
+}

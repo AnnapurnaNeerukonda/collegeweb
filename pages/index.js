@@ -8,7 +8,7 @@ const Home = () => {
   const [numberOfStudents, setNumberOfStudents] = useState(0);
   const [campusAcreage, setCampusAcreage] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-  const countRef = useRef(null); // Declare countRef using useRef
+  const countRef = useRef(null); 
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -53,7 +53,7 @@ const Home = () => {
     <div>
       <Slider/>
       <div className={styles.imagecontainer}>
-        <div ref={countRef} className='text-center mt-5 mb-5'>
+        <div ref={countRef} className={`${styles.smallscreen} text-center`} >
           <h3 className='text-center'>Vishnu Educational Society- One of India's <p className='mt-3 mb-5'>-Best Ranked Universities</p> </h3>
           <img src="https://svecw.edu.in/wp-content/uploads/2024/03/home-slider-2.webp" alt="Image description" className={styles.image} />
           <div className={styles.text}>Top Quality And Learning Experience</div>
