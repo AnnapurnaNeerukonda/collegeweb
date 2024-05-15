@@ -54,7 +54,7 @@ const Home = () => {
       <Slider/>
       <div className={styles.imagecontainer}>
         <div ref={countRef} className={`${styles.smallscreen} text-center`} >
-          <h3 className='text-center'>Vishnu Educational Society- One of India's <p className='mt-3 mb-5'>-Best Ranked Universities</p> </h3>
+        <h3 className='text-center'>Vishnu Educational Society- One of India&apos;s <p className='mt-3 mb-5'>-Best Ranked Universities</p> </h3>
           <img src="https://svecw.edu.in/wp-content/uploads/2024/03/home-slider-2.webp" alt="Image description" className={styles.image} />
           <div className={styles.text}>Top Quality And Learning Experience</div>
         </div>
