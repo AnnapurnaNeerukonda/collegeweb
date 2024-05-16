@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import styles from '../styles/Home.module.css';
 import {FaArrowRight } from 'react-icons/fa';
 import Link from 'next/link';
-
+import Card from './card-components';
 const Home = () => {
   const [establishedYear, setEstablishedYear] = useState(0);
   const [numberOfStudents, setNumberOfStudents] = useState(0);
@@ -86,6 +86,46 @@ const Home = () => {
           </a>
         </Link>
       </div>
+      <div className="container mt-3">
+        <h5 className='mt-5 mb-5 text-center'>Accreditations & Awards</h5>
+      <div className="row">
+        <div className="col-md-3 col-sm-6 col-12 mb-4">
+          <div className="card">
+            <img src="/images/academicresearch.jpg" className="card-img-top" alt="Image 1" style={{ height: '200px' }}/>
+            <div className="card-body">
+              <p className="card-text">Ranked in MHRD – NIRF Engineering College Ranking in India</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-3 col-sm-6 col-12 mb-4">
+          <div className="card">
+            <img src="/images/research2.jpg" className="card-img-top" alt="Image 2" style={{ height: '200px' }}/>
+            <div className="card-body">
+              <p className="card-text">Listed as Best Engineering College by India Today Magazine
+</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-3 col-sm-6 col-12 mb-4">
+          <div className="card">
+            <img src="/images/research3.jpg" className="card-img-top" alt="Image 3"style={{ height: '200px' }} />
+            <div className="card-body">
+              <p className="card-text">Listed as Best Engineering College in THE WEEK – Hansa Research Survey
+</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-3 col-sm-6 col-12 mb-4">
+          <div className="card">
+            <img src="/images/research4.jpg" className="card-img-top" alt="Image 4" style={{ height: '200px' }}/>
+            <div className="card-body">
+              <p className="card-text">Ranked in Atal Ranking of Institutions on Innovation Achievements (ARIIA).
+</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
   );
 };
