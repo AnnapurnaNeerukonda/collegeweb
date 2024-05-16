@@ -4,11 +4,10 @@ import styles from '../styles/department.module.css';
 const Department = () => {
   return (
     <>
-    <Slider/>
     <div className={`${styles.container} container-fluid`}>
       <h2 className="text-center mt-3 mb-5">Departments</h2>
       <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 justify-content-center">
-      <div className="col mb-4">
+      <div className="col mb-4 ">
           <div className={`${styles.card} card`}>
             <img src="/images/department1.jpg" className="card-img-top" alt="Department 2" />
             <div  className={`${styles.cardtext} card-text`}>Computer Science & Engineering</div>

@@ -66,14 +66,14 @@
   }
 }
 
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
   .smallscreen{
     margin-top: -20% !important;
   }
-}
+} */
 
-@media (max-width: 416px) {
+/* @media (max-width: 416px) {
   .smallscreen{
     margin-top: -37% !important;
   }
-}
+} */

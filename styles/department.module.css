@@ -24,7 +24,7 @@
 
 .card {
   transition: transform 0.3s ease;
-  width: 285px; 
+  width: 250px; 
   height: 150px; 
   background-color: rgba(255, 255, 255, 0.7); 
   border: 1px solid #000; 
@@ -75,7 +75,11 @@
   display: block;
   background-color:black;
 }
-
+@media (max-width: 450px) {
+  .row-cols-1 {
+    justify-content: center; /* Center-align the cards when there's only one column */
+  }
+}
 
 @media (max-width: 767px) {
   .container,
@@ -83,4 +87,23 @@
     min-height: auto; 
     height: auto; 
   }
+  .card {
+    transition: transform 0.3s ease;
+    width: 230px; 
+    height: 150px; 
+    background-color: rgba(255, 255, 255, 0.7); 
+    border: 1px solid #000; 
+    position: relative;
+  }
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .card {
+    transition: transform 0.3s ease;
+    width: 180px; 
+    height: 150px; 
+    background-color: rgba(255, 255, 255, 0.7); 
+    border: 1px solid #000; 
+    position: relative;
+  }
+}
+

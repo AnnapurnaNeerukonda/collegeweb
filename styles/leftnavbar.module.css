@@ -1,0 +1,14 @@
+.parentleftnavbar{
+    min-height: 90vh;
+}
+.nav{
+    background-color: rgb(180, 233, 245);
+}
+.link{
+ text-decoration: none;  
+ color: rgb(16, 77, 131); 
+}
+.sidenav{
+    background-color:rgb(198, 235, 223);
+    min-height: 90vh;
+}

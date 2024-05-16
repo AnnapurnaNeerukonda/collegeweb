@@ -4,12 +4,21 @@ import { useRouter } from 'next/router';
 import { mainMenu as menuLinks } from '../config';
 import { useState } from 'react';
 import LoginModal from '../pages/Login';
+
 const MenuItem = ({ title, path, subMenu, id }) => {
   const router = useRouter();
   const [showLoginModal, setShowLoginModal] = useState(false); // Move state up to Header component
 
   const handleLoginClick = () => {
     setShowLoginModal(true);
+  };
+
+  const handleMenuItemClick = (path) => {
+    if (path === '/leftnavbar') {
+      router.push('/leftnavbar');
+    } else {
+      router.push(path);
+    }
   };
 
   if (subMenu) {
@@ -37,11 +46,14 @@ const MenuItem = ({ title, path, subMenu, id }) => {
   return (
     <Nav.Item>
       <Link href={path} passHref>
-        <Nav.Link active={router.pathname === path}>{title}</Nav.Link>
+        <Nav.Link active={router.pathname === path} onClick={() => handleMenuItemClick(path)}>
+          {title}
+        </Nav.Link>
       </Link>
     </Nav.Item>
   );
 };
+
 
 const DropdownItem = ({ title, path, divider }) => {
   const router = useRouter();
@@ -58,6 +70,11 @@ const DropdownItem = ({ title, path, divider }) => {
 };
 
 const Header = () => {
+  const router = useRouter();
+
+  const handleMenuClick = (path) => {
+    router.push(path);
+  };
   return (
     <Navbar style={{ backgroundColor: "#ADD8E6" }} expand="lg">
       <Container fluid>

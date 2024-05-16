@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import styles from '../styles/Home.module.css';
+import styles from '../styles/home.module.css';
 import {FaArrowRight } from 'react-icons/fa';
 import Link from 'next/link';
-import Card from './card-components';
 const Home = () => {
   const [establishedYear, setEstablishedYear] = useState(0);
   const [numberOfStudents, setNumberOfStudents] = useState(0);

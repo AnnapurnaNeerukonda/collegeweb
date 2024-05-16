@@ -55,7 +55,7 @@ export const mainMenu = [
   },
   {
     title: 'Branches', // New navigation item
-    path:'/'
+    path:'/leftsidebar'
   },
   {
     title: 'Login',
