@@ -54,6 +54,20 @@ export const mainMenu = [
    
   },
   {
+    title: 'Branches', // New navigation item
+    id: '2',
+    subMenu: [
+      {
+        title: 'Hyderabad', // Submenu item
+        path: '/hyderabad', // Path for Hyderabad
+      },
+      {
+        title: 'Bhimavaram', // Submenu item
+        path: '/bhimavaram', // Path for Bhimavaram
+      },
+    ],
+  },
+  {
     title: 'Login',
     path: '/',
   },

@@ -15,12 +15,12 @@ const TimelineItem = ({ year, heading, star }) => (
     </div>
   </div>
 );
-
 const About = ({ }) => {
   return (
     <div>
       <div className={styles.about}>
-      <div className={styles.title} style={{fontWeight: "bold"}}>History</div>
+      <div className={styles.title} style={{fontWeight: "bold"}}>History </div>
+      <h6 className='text-center'>SVES Timeline</h6>
       <div className='text-center mb-5'>
         <h6>Sri Vishnu Educational Society has stood first among equals because of its quest and hard work to<br></br> develop as an educational society which stands apart.</h6>
       </div>

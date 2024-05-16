@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import Slider from './slider';
 import styles from '../styles/department.module.css';
 const Department = () => {
   return (
+    <>
+    <Slider/>
     <div className={`${styles.container} container-fluid`}>
       <h2 className="text-center mt-3 mb-5">Departments</h2>
       <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 justify-content-center">
@@ -59,6 +62,7 @@ const Department = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

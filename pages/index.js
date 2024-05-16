@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from '../styles/Home.module.css';
 import {FaArrowRight } from 'react-icons/fa';
-import Slider from '../pages/slider';
 import Link from 'next/link';
 
 const Home = () => {
@@ -52,7 +51,13 @@ const Home = () => {
 
   return (
     <div>
-      <Slider/>
+      <div  className={styles.videocontainer}>
+           <video className={styles.video} autoPlay loop muted playsInline>
+  <source src="/images/svecwvideo.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+  
+</video>
+</div>
       <div className={`${styles.imagecontainer} mb-5`}>
         <div className={`${styles.smallscreen} text-center mb-5`} >
           <h3 className='text-center'>Vishnu Educational Society- One of India&apos;s <p className='mt-3 mb-5'>-Best Ranked Universities</p> </h3>

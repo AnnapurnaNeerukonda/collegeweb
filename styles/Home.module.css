@@ -28,15 +28,32 @@
   padding: 10px;
 }
 .text {
-  color: white; /* Set text color to white */
-  padding: 5px 10px; /* Add padding for better visibility */
-  border-radius: 5px; /* Add border radius for rounded corners */
+  color: white; 
+  padding: 5px 10px; 
+  border-radius: 5px; 
   background-color: blue;
-  text-align: center; /* Center text horizontally */
+  text-align: center;
   position: absolute;
-  left: 50%; /* Move the text to the middle horizontally */
-  transform: translateX(-50%); /* Center the text perfectly */
+  left: 50%; 
+  transform: translateX(-50%); 
 }
+.videocontainer {
+  width: 100%;
+  height: 70vh; 
+  overflow: hidden; 
+  position: relative;
+}
+
+.video {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  position: absolute; 
+  top: 0; 
+  left: 0; }
+
+
+
 
 @media (max-width: 768px) {
   .imagecontainer:hover .image {
