@@ -3,7 +3,7 @@
 import { Modal, Form, Button, Alert } from 'react-bootstrap';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import styles from '../styles/loginmodal.module.css';
+import styles from '../styles/LoginModal.module.css';
 import { AiFillCheckCircle } from 'react-icons/ai';
 
 const LoginModal = (props) => {
