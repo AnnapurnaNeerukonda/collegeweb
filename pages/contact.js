@@ -85,9 +85,7 @@ const Contact = () => {
                 </div>
                 </div>
            <h3 className="text-center p-5 text-primary">Enjoy your Student Life & Excel at VISHNU</h3>
-
   </div>
-
       </div>
     </div>
   );

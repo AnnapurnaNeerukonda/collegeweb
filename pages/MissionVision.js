@@ -12,8 +12,8 @@ const MissionVision = () => {
       if (entries[0].isIntersecting) {
         setTimeout(() => {
           setShowCoreValues(true);
-        }, 1000); // Delay the display of core values by 1 second
-        observer.disconnect(); // Disconnect the observer once executed
+        }, 1000); 
+        observer.disconnect(); 
       }
     });
     observer.observe(missionVisionRef.current);

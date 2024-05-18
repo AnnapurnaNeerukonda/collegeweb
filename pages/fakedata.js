@@ -21,7 +21,7 @@ const Fakedata = () => {
       <div className="row">
         {users.map(user => (
           <div key={user.id} className="col-md-4 mb-4">
-            <div className={`${user.card}card shadow-lg`}>
+            <div className="card shadow-lg">
               <div className="card-body">
                 <h5 className="card-title text-primary">{user.firstName} ({user.username})</h5>
                 <p className="card-text">Age: {user.age}</p>

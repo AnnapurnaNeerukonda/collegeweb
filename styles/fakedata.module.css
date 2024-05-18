@@ -4,23 +4,23 @@
   gap: 16px;
 }
 
-.user.card {
-
+.usercard {
+  border: 1px solid red ;
   border-radius: 8px;
   padding: 16px;
   width: 200px;
   border-radius: 8px;
-  box-shadow: 0px 2px 8px blue; 
+  box-shadow: 0px 2px 8px rgb(101, 208, 212); 
 }
 
-.user.card.shadow-lg {
+.usercard.shadow-lg {
   box-shadow: 0 4px 8px rgba(0, 123, 255, 0.6);
 }
 
-.user.card h2 {
+.usercard h2 {
   margin-top: 0;
 }
 
-.user.card p {
+.usercard p {
   margin: 8px 0;
 }

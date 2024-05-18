@@ -48,24 +48,17 @@ const LoginModal = (props) => {
     }
     setPasswordError('');
 
-    // Add your login logic here
     console.log('Logging in with:', { username, password });
 
-    // Redirect to the dashboard page after login
-    router.push('/fakedata'); // navigate to the dashboard page
-
-    // Reset the form
+    router.push('/fakedata'); 
     setUsername('');
     setPassword('');
-    // Close the modal
     handleClose();
   };
 
   const handlePasswordChange = (e) => {
     const updatedPassword = e.target.value;
     setPassword(updatedPassword);
-
-    // Update password requirements state
     setPasswordRequirements({
       uppercase: /[A-Z]/.test(updatedPassword),
       lowercase: /[a-z]/.test(updatedPassword),
