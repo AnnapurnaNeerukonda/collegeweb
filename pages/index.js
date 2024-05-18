@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import styles from '../styles/home.module.css';
+import styles from '../styles/Home.module.css';
 import {FaArrowRight } from 'react-icons/fa';
 import Link from 'next/link';
 const Home = () => {
