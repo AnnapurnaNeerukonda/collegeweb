@@ -1,5 +1,8 @@
+// pages/login.js
+
 import { Modal, Form, Button, Alert } from 'react-bootstrap';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import styles from '../styles/loginmodal.module.css';
 import { AiFillCheckCircle } from 'react-icons/ai';
 
@@ -17,21 +20,20 @@ const LoginModal = (props) => {
     minLength: false,
   });
 
+  const router = useRouter();
+
   const handleClose = () => {
     onHide();
   };
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Validate username
     const usernameRegex = /^(?![_\W])(?!.*[_\W]$)[\w\W]{8,}$/;
     if (!usernameRegex.test(username)) {
       setUsernameError('Username must be at least 8 characters and cannot start or end with a special character');
       return;
     }
     setUsernameError('');
-
-    // Validate password
     const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).{6,}$/;
     if (!passwordRegex.test(password)) {
       setPasswordError('Password must meet the following requirements:');
@@ -48,6 +50,10 @@ const LoginModal = (props) => {
 
     // Add your login logic here
     console.log('Logging in with:', { username, password });
+
+    // Redirect to the dashboard page after login
+    router.push('/fakedata'); // navigate to the dashboard page
+
     // Reset the form
     setUsername('');
     setPassword('');

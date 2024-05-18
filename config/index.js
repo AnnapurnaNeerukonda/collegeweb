@@ -61,6 +61,10 @@ export const mainMenu = [
     title: 'Login',
     path: '/',
   },
+  {
+    title:'Sign Up',
+    path:'/signup'
+  }
 ];
 export const site = {
   titleImage: 'public\images\logo.png',
