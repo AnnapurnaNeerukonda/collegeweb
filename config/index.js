@@ -64,6 +64,10 @@ export const mainMenu = [
   {
     title:'Sign Up',
     path:'/signup'
+  },
+  {
+    title:'Students',
+    path:'/student'
   }
 ];
 export const site = {

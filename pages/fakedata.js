@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import '../styles/fakedata.module.css';  // Add your custom styles here
-
+import styles from '../styles/fakedata.module.css'
 const Fakedata = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
     axios.get('https://dummyjson.com/users')
       .then(response => {
-        const firstNineUsers = response.data.users.slice(0, 9);
+        const firstNineUsers = response.data.users.slice(0, 15);
         setUsers(firstNineUsers);
       })
       .catch(error => {
@@ -22,7 +21,7 @@ const Fakedata = () => {
       <div className="row">
         {users.map(user => (
           <div key={user.id} className="col-md-4 mb-4">
-            <div className="card user-card shadow-lg">
+            <div className={`${user.card}card shadow-lg`}>
               <div className="card-body">
                 <h5 className="card-title text-primary">{user.firstName} ({user.username})</h5>
                 <p className="card-text">Age: {user.age}</p>
