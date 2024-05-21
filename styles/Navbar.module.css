@@ -1,22 +1,68 @@
-.navbarimg {
-  width: 35%;
-}
-
 .navbar {
   display: flex;
   align-items: center;
+  background-color: skyblue; 
+  position: sticky;
+  top: 0;
   justify-content: space-between;
+  z-index: 1000; 
 }
 
-@media (max-width: 600px) {
-  .navbarBrand {
-    width: 35%;
-  }
-  .navbarimg {
-    width: 60%;
-  }
+.navbarimg {
+  width: 35% !important;
+}
+
+.navbarmenu {
+  list-style: none; 
+}
+
+.navbar a {
+  
+  text-decoration: none;
+  font-weight: 500;
+  color: white; 
+}
+.navbar a:hover{
+  background-color: rgba(109, 171, 195,0.4);
+  padding:5px;
+  border-radius: 10px;
 }
 
 .navbar-toggler {
   margin-left: auto;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bg-lightblue {
+  background-color: skyblue; 
+}
+
+.list-none {
+  list-style-type: none; 
+}
+
+.navbar-toggler svg {
+  color: white;
+}
+
+.bglightblue {
+  background-color: skyblue;
+}
+
+.dropdown-menu-content {
+  background-color: skyblue; 
+  color: white; 
+}
+
+.dropdown-item {
+  color: white; }
+
+@media (max-width: 600px) {
+  .navbarimg {
+    width: 60%;
+  }
 }
