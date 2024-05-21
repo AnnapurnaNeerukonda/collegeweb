@@ -25,7 +25,6 @@ const MenuItem = ({ title, path, subMenu }) => {
   const handleMenuItemClick = (path) => {
     router.push(path);
     if (typeof window !== 'undefined' && window.innerWidth <= 768) {
-      // Close the menu after clicking an item in mobile view
       setShowMenu(false);
     }
   };
@@ -94,8 +93,8 @@ const Header = () => {
 
   return (
     <NavigationMenu className={`${styles.navbar} bg-lightblue fixed w-full mt-0`}>
-      <div className={`${styles['navbar-content']} mx-auto px-4 sm:px-6 lg:px-8 w-screen h-20`}>
-        <div className="flex items-center">
+      <div className={`${styles['navbar-content']} mx-auto px-4 sm:px-6 lg:px-8 w-screen h-20 flex justify-center items-center`}>
+        <div className="flex items-center mr-8">
           <img
             src="/images/svecw-logo.png"
             alt="Navbar"
@@ -112,15 +111,15 @@ const Header = () => {
             </svg>
           </button>
           {showMenu && (
-            <div className={`${styles.bglightblue} ${styles.navbarmenu} flex flex-col items-start  text-white absolute top-20 left-0 w-full pl-4`}>
+            <div className={`${styles.bglightblue} ${styles.navbarmenu} flex flex-col items-start text-white absolute top-20 left-0 w-full pl-4`}>
               {menuLinks.map((item, index) => (
                 <MenuItem {...item} key={index} />
               ))}
             </div>
           )}
         </div>
-        <div className="hidden lg:flex lg:items-center text-white">
-          <NavigationMenuList className="flex flex-col lg:flex-row">
+        <div className="hidden lg:flex lg:items-center lg:gap-x-6 text-white">
+          <NavigationMenuList className="flex flex-col lg:flex-row lg:gap-x-6">
             {menuLinks.map((item, index) => (
               <MenuItem {...item} key={index} />
             ))}

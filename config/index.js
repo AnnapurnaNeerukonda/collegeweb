@@ -24,31 +24,31 @@ export const mainMenu = [
       },
       {
         title: 'Information Technology',
-        path: '/department', 
+        path: '/department/it', 
       },
       {
         title: 'Computer Science and Technology',
-        path: '/department', 
+        path: '/department/cse', 
       },
       {
         title: 'Electronics and Communication Engineering',
-        path: '/department', 
+        path: '/department/ece', 
       },
       {
         title: 'Artificial Engineering (AI)',
-        path: '/department', 
+        path: '/department/ai', 
       },
       {
         title: 'Electrical & Electronics Engineering',
-        path: '/department', 
+        path: '/department/eee', 
       },
       {
         title: 'Mechanical Engineering',
-        path: '/department', 
+        path: '/department/me', 
       },
       {
         title: 'Civil Engineering (CE)',
-        path: '/department', 
+        path: '/department/ce', 
       },
     ],
    
@@ -59,7 +59,7 @@ export const mainMenu = [
   },
   {
     title: 'Login',
-    path: '/',
+    path: '/Login',
   },
   {
     title:'Sign Up',
