@@ -13,18 +13,34 @@ const Contact = () => {
           <div className="border-b-2 border-black w-1/2 mx-auto mb-6"></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white p-8">
-            <h3 className="font-semibold mb-4">Address</h3>
-            <p className="mb-4">Vishnupur, Bhimavaram, West Godavari Dist. – 534 202, A.P., India.</p>
-            <h3 className="font-semibold mb-4">Call us at</h3>
-            <p className="mb-4"><FaPhone className="inline-block mr-2" /> +91 9087656784, +91-44- 274444000</p>
-            <h3 className="font-semibold mb-4">Information Center For Admissions</h3>
-            <p className="mb-4"><FaPhone className="inline-block mr-2" /> +91 9034562998 | <FaEnvelope className="inline-block mr-2" /> infodesk@svecw.edu.in</p>
-          </div>
-          <div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30593.33291547152!2d81.48604911083983!3d16.568119000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37cd4eb220051d%3A0xea3d7b50d0a1458!2sShri%20Vishnu%20Engineering%20College%20Autonomous!5e0!3m2!1sen!2sin!4v1715508671415!5m2!1sen!2sin" width="100%" height="350" style={{ border: "0" }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
+  <div className="bg-white p-8 flex flex-col justify-between">
+    <div>
+      <h3 className="font-semibold mb-4">Address</h3>
+      <p className="mb-4">Vishnupur, Bhimavaram, West Godavari Dist. – 534 202, A.P., India.</p>
+    </div>
+    <div>
+      <h3 className="font-semibold mb-4">Call us at</h3>
+      <p className="mb-4"><FaPhone className="inline-block mr-2" /> +91 9087656784, +91-44- 274444000</p>
+    </div>
+    <div>
+      <h3 className="font-semibold mb-4">Information Center For Admissions</h3>
+      <p className="mb-4"><FaPhone className="inline-block mr-2" /> +91 9034562998 | <FaEnvelope className="inline-block mr-2" /> infodesk@svecw.edu.in</p>
+    </div>
+  </div>
+  <div className="flex">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30593.33291547152!2d81.48604911083983!3d16.568119000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37cd4eb220051d%3A0xea3d7b50d0a1458!2sShri%20Vishnu%20Engineering%20College%20Autonomous!5e0!3m2!1sen!2sin!4v1715508671415!5m2!1sen!2sin" 
+      width="100%" 
+      height="100%" 
+      style={{ border: "0" }} 
+      allowFullScreen="" 
+      loading="lazy" 
+      referrerPolicy="no-referrer-when-downgrade"
+      className="w-full"
+    ></iframe>
+  </div>
+</div>
+
       </div>
       <div className="container mx-auto py-12">
         <div className="text-center">
