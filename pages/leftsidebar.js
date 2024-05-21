@@ -1,12 +1,15 @@
 import { useState } from 'react';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styles from '../styles/leftnavbar.module.css';
 
 const LeftSidebar = () => {
   const [selectedCity, setSelectedCity] = useState('');
+  const router = useRouter();
 
   const handleClick = (city) => {
     setSelectedCity(city);
+    // Programmatically navigate to the desired route
+    // router.push(`/city/${city.toLowerCase()}`);
   };
 
   return (
@@ -15,18 +18,14 @@ const LeftSidebar = () => {
         <div className={`${styles.nav} col-2 pt-4`}>
           <ul>
             <li type='none' className='mb-4'>
-              <Link href="#">
-                <a onClick={() => handleClick('Hyderabad')} className={styles.link}>
-                  Hyderabad
-                </a>
-              </Link>
+              <p  onClick={() => handleClick('Hyderabad')} className={styles.link}>
+                Hyderabad
+              </p>
             </li>
             <li type='none'>
-              <Link href="#">
-                <a onClick={() => handleClick('Bhimavaram')} className={styles.link}>
-                  Bhimavaram
-                </a>
-              </Link>
+              <p onClick={() => handleClick('Bhimavaram')} className={styles.link}>
+                Bhimavaram
+              </p>
             </li>
           </ul>
         </div>

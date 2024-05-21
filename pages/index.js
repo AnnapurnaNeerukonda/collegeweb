@@ -1,14 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from '../styles/Home.module.css';
-import {FaArrowRight } from 'react-icons/fa';
+import { Card, CardContent, CardDescription} from "@/components/ui/card";
 import Link from 'next/link';
 const Home = () => {
   const [establishedYear, setEstablishedYear] = useState(0);
   const [numberOfStudents, setNumberOfStudents] = useState(0);
   const [campusAcreage, setCampusAcreage] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-  const countRef = useRef(null); 
-
+  const countRef = useRef(null);
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -47,16 +46,14 @@ const Home = () => {
     }
     return () => clearInterval(intervalId);
   }, [isVisible, establishedYear, numberOfStudents, campusAcreage]);
-
   return (
     <div>
-      <div  className={styles.videocontainer}>
-           <video className={styles.video} autoPlay loop muted playsInline>
-  <source src="/images/svecwvideo.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-  
-</video>
-</div>
+      <div className={styles.videocontainer}>
+        <video className={styles.video} autoPlay loop muted playsInline>
+          <source src="/images/svecwvideo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
       <div className={`${styles.imagecontainer} mb-5`}>
         <div className={`${styles.smallscreen} text-center mb-5`} >
           <h3 className='text-center'>Vishnu Educational Society- One of India&apos;s <p className='mt-3 mb-5'>-Best Ranked Universities</p> </h3>
@@ -64,7 +61,7 @@ const Home = () => {
           <div className={`${styles.text} mb-5 `}>Top Quality And Learning Experience</div>
         </div>
       </div>
-      <div className='container text-center' style={{marginTop:"90px"}}>
+      <div className='container text-center' style={{ marginTop: "90px" }}>
         <div ref={countRef} className='row mb-4' style={{ color: "#0000ff" }}>
           <div className='col-md-4'>
             <h1>{establishedYear}</h1>
@@ -79,54 +76,44 @@ const Home = () => {
             <h5 style={{ color: "#0000ff" }}>Acres Green Campus</h5>
           </div>
         </div>
-        <Link href="/aboutUS">
-          <a className="btn btn-primary">
-            Explore More <FaArrowRight className="ml-1" />
-          </a>
-        </Link>
+        <Link href="/aboutUS" passHref>
+        <div className="btn btn-primary cursor-pointer">
+          Explore More
+        </div>
+      </Link>
       </div>
       <div className="container mt-3">
-        <h5 className='mt-5 mb-5 text-center'>Accreditations & Awards</h5>
-      <div className="row">
-        <div className="col-md-3 col-sm-6 col-12 mb-4">
-          <div className="card">
-            <img src="/images/academicresearch.jpg" className="card-img-top" alt="Image 1" style={{ height: '200px' }}/>
-            <div className="card-body">
-              <p className="card-text">Ranked in MHRD – NIRF Engineering College Ranking in India</p>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-3 col-sm-6 col-12 mb-4">
-          <div className="card">
-            <img src="/images/research2.jpg" className="card-img-top" alt="Image 2" style={{ height: '200px' }}/>
-            <div className="card-body">
-              <p className="card-text">Listed as Best Engineering College by India Today Magazine
-</p>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-3 col-sm-6 col-12 mb-4">
-          <div className="card">
-            <img src="/images/research3.jpg" className="card-img-top" alt="Image 3"style={{ height: '200px' }} />
-            <div className="card-body">
-              <p className="card-text">Listed as Best Engineering College in THE WEEK – Hansa Research Survey
-</p>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-3 col-sm-6 col-12 mb-4">
-          <div className="card">
-            <img src="/images/research4.jpg" className="card-img-top" alt="Image 4" style={{ height: '200px' }}/>
-            <div className="card-body">
-              <p className="card-text">Ranked in Atal Ranking of Institutions on Innovation Achievements (ARIIA).
-</p>
-            </div>
-          </div>
+        <h5 className="mt-5 mb-5 text-center">Accreditations & Awards</h5>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          <Card>
+            <CardContent>
+              <img src="/images/academicresearch.jpg" className="card-img-top" alt="Image 1" style={{ height: '200px' }} />
+              <CardDescription>Ranked in MHRD – NIRF Engineering College Ranking in India</CardDescription>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent>
+              <img src="/images/research2.jpg" className="card-img-top" alt="Image 2" style={{ height: '200px' }} />
+              <CardDescription>Listed as Best Engineering College by India Today Magazine</CardDescription>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent>
+              <img src="/images/research3.jpg" className="card-img-top" alt="Image 3" style={{ height: '200px' }} />
+              <CardDescription>Listed as Best Engineering College in THE WEEK – Hansa Research Survey</CardDescription>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent>
+              <img src="/images/research4.jpg" className="card-img-top" alt="Image 4" style={{ height: '200px' }} />
+              <CardDescription>Ranked in Atal Ranking of Institutions on Innovation Achievements (ARIIA).</CardDescription>
+            </CardContent>
+          </Card>
         </div>
       </div>
-    </div>
+
     </div>
   );
-};
 
+};
 export default Home;

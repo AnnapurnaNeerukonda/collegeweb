@@ -95,11 +95,15 @@ const MissionVision = () => {
             )}
           </div>
         </div>
-        </div>
-        <div className='mt-5'>
-            <img src="https://sastra.edu/images/sastra/MissionVission/mission2025.jpg" className='vision-img' alt='vision-img'/>
-        </div>
-      <style jsx>{`
+        <div className="row justify-content-center">
+    <div className='col-md-6 text-center'>
+        <img src="https://sastra.edu/images/sastra/MissionVission/mission2025.jpg" class="vision-img" alt="vision-img"/>
+    </div>
+</div>
+
+</div>
+
+      <style jsx>{`    
         .list-group {
           padding-left: 0;
           list-style-type: none; 

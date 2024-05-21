@@ -9,7 +9,37 @@
   transition: opacity 0.3s ease; /* Apply transition for opacity */
   opacity: 0; /* Initially hide the overlay */
 }
+.requirementsList {
+  list-style: none;
+  padding-left: 0;
+}
 
+.requirementItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px; /* Adjust as needed */
+}
+
+.icon {
+  margin-right: 8px; /* Adjust as needed */
+}
+
+.valid {
+  color: green;
+}
+
+.default {
+  color: black;
+}
+
+.requirementsList li span {
+  display: flex;
+  align-items: center;
+}
+
+.requirementsList li span svg {
+  margin-right: 5px;
+}
 .showOverlay {
   opacity: 1; /* Show the overlay when modal is open */
 }

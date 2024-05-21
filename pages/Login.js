@@ -1,10 +1,10 @@
-// pages/login.js
-
-import { Modal, Form, Button, Alert } from 'react-bootstrap';
+import { Modal, Button, Alert } from 'react-bootstrap';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import styles from '../styles/LoginModal.module.css';
 import { AiFillCheckCircle } from 'react-icons/ai';
+import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/input';
 
 const LoginModal = (props) => {
   const { show, onHide } = props;
@@ -53,6 +53,13 @@ const LoginModal = (props) => {
     router.push('/fakedata'); 
     setUsername('');
     setPassword('');
+    setPasswordRequirements({
+      uppercase: false,
+      lowercase: false,
+      number: false,
+      specialCharacter: false,
+      minLength: false,
+    });
     handleClose();
   };
 
@@ -74,66 +81,61 @@ const LoginModal = (props) => {
         <Modal.Title>Login</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Form onSubmit={handleLogin}>
-          <Form.Group controlId="formBasicUsername">
-            <Form.Label>Username</Form.Label>
-            <Form.Control
+        <form onSubmit={handleLogin}>
+          <div className={styles.formGroup}>
+            <Label htmlFor="username">Username</Label>
+            <Input
               type="text"
-              placeholder="Enter username"
+              id="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               required
             />
             {usernameError && <Alert variant="danger">{usernameError}</Alert>}
-          </Form.Group>
+          </div>
 
-          <Form.Group controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control
+          <div className={styles.formGroup}>
+            <Label htmlFor="password">Password</Label>
+            <Input
               type="password"
-              placeholder="Password"
+              id="password"
               value={password}
               onChange={handlePasswordChange}
               required
             />
             <ul className={styles.requirementsList}>
               <li>
-                <span className={passwordRequirements.uppercase ? styles.valid : ''}>
-                  <AiFillCheckCircle />
+                <span className={passwordRequirements.uppercase ? styles.valid : styles.default}>
+                  <AiFillCheckCircle /> One uppercase letter is mandatory
                 </span>
-                One uppercase letter is mandatory
               </li>
               <li>
-                <span className={passwordRequirements.lowercase ? styles.valid : ''}>
-                  <AiFillCheckCircle />
+                <span className={passwordRequirements.lowercase ? styles.valid : styles.default}>
+                  <AiFillCheckCircle /> One lowercase letter is mandatory
                 </span>
-                One lowercase letter is mandatory
               </li>
               <li>
-                <span className={passwordRequirements.number ? styles.valid : ''}>
-                  <AiFillCheckCircle />
+                <span className={passwordRequirements.number ? styles.valid : styles.default}>
+                  <AiFillCheckCircle /> One number is mandatory
                 </span>
-                One number is mandatory
               </li>
               <li>
-                <span className={passwordRequirements.specialCharacter ? styles.valid : ''}>
-                  <AiFillCheckCircle />
+                <span className={passwordRequirements.specialCharacter ? styles.valid : styles.default}>
+                  <AiFillCheckCircle /> One special character is mandatory
                 </span>
-                One special character is mandatory
               </li>
               <li>
-                <span className={passwordRequirements.minLength ? styles.valid : ''}>
-                  <AiFillCheckCircle />
+                <span className={passwordRequirements.minLength ? styles.valid : styles.default}>
+                  <AiFillCheckCircle /> Minimum length of 6 characters is mandatory
                 </span>
-                Minimum length of 6 characters is mandatory
               </li>
             </ul>
             {passwordError && <Alert variant="danger">{passwordError}</Alert>}
-          </Form.Group>
+          </div>
           <Button variant="primary" type="submit">
             Login
           </Button>
-        </Form>
+        </form>
       </Modal.Body>
     </Modal>
   );

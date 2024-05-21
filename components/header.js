@@ -1,26 +1,20 @@
-import { Container, Nav, Navbar, NavDropdown, Modal, Form, Button } from 'react-bootstrap';
-import Link from 'next/link';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { useRouter } from 'next/router';
 import { mainMenu as menuLinks } from '../config';
 import { useState } from 'react';
 import LoginModal from '../pages/Login';
+import styles from '../styles/navbar.module.css'
+
 
 const MenuItem = ({ title, path, subMenu, id }) => {
   const router = useRouter();
-  const [showLoginModal, setShowLoginModal] = useState(false); // Move state up to Header component
-
+  const [showLoginModal, setShowLoginModal] = useState(false);
   const handleLoginClick = () => {
     setShowLoginModal(true);
   };
-
   const handleMenuItemClick = (path) => {
-    if (path === '/leftnavbar') {
-      router.push('/leftnavbar');
-    } else {
-      router.push(path);
-    }
+    router.push(path);
   };
-
   if (subMenu) {
     const activeChild = subMenu.find((item) => router.pathname === item.path);
     return (
@@ -31,7 +25,6 @@ const MenuItem = ({ title, path, subMenu, id }) => {
       </NavDropdown>
     );
   }
-
   if (title === 'Login') {
     return (
       <>
@@ -42,53 +35,57 @@ const MenuItem = ({ title, path, subMenu, id }) => {
       </>
     );
   }
-
   return (
     <Nav.Item>
-      <Link href={path} passHref>
-        <Nav.Link active={router.pathname === path} onClick={() => handleMenuItemClick(path)}>
-          {title}
-        </Nav.Link>
-      </Link>
+      <a
+        href={path}
+        className={`nav-link ${router.pathname === path ? 'active' : ''}`}
+        onClick={(e) => {
+          e.preventDefault();
+          handleMenuItemClick(path);
+        }}
+      >
+        {title}
+      </a>
     </Nav.Item>
   );
 };
-
-
 const DropdownItem = ({ title, path, divider }) => {
   const router = useRouter();
-
   if (divider) {
     return <NavDropdown.Divider />;
   }
-
   return (
-    <Link href={path} passHref>
-      <NavDropdown.Item active={router.pathname === path}>{title}</NavDropdown.Item>
-    </Link>
+    <a
+      href={path}
+      className={`dropdown-item ${router.pathname === path ? 'active' : ''}`}
+      onClick={(e) => {
+        e.preventDefault();
+        router.push(path);
+      }}
+    >
+      {title}
+    </a>
   );
 };
+
 
 const Header = () => {
   const router = useRouter();
 
-  const handleMenuClick = (path) => {
-    router.push(path);
-  };
   return (
-    <Navbar style={{ backgroundColor: "#ADD8E6" }} expand="lg">
+    <Navbar className={styles.navbar} expand="lg" style={{ backgroundColor: "#ADD8E6" }}>
       <Container fluid>
-        <Navbar.Brand>
+        <Navbar.Brand className={styles.navbarBrand}>
           <img
             src="/images/svecw-logo.png"
-            height="40"
-            className="d-inline-block align-top"
+            className={`${styles.navbarimg} d-inline-block align-top`}
             alt="Navbar"
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className={styles.navbarToggler} />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
-          <Nav className="justify-content-between " style={{ fontWeight: "bold" }}>
+          <Nav className="justify-content-between" style={{ fontWeight: "bold" }}>
             {menuLinks.map((item, index) => (
               <MenuItem {...item} key={index} />
             ))}
